@@ -32,7 +32,7 @@ num_movies = int(max(max(training_set[:,1]),max(test_set[:,1])))
 # Convert the data into an array with users as rows and movies in columns: input = user, features = movie watched
 def convert(data):
     # Make a list of lists. Each of the 943 users in the list will have a list of which of the 1682 movies they watched
-    # List instead of array because torch expects lists of lists (says it still works with arrays though)
+    # List instead of array because torch expects lists of lists (torch docs say it still works with arrays though)
     new_data = []
     for user_ids in range(1,num_users+1):
         # Second bracket is syntax for a conditional, says only get all movies for current user
